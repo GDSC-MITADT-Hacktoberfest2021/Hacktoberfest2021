@@ -1,4 +1,5 @@
 # Classification on the MNIST dataset
 Download the dataset here: https://www.kaggle.com/c/digit-recognizer/data
 
-### Difficulty: [alt text](Hacktoberfest2021/MLProjects/Images/one_star.png)
+### Difficulty:
+![](https://github.com/GDSC-MITADT-Hacktoberfest2021/Hacktoberfest2021/blob/main/MLProjects/Images/one_star.jpg)
