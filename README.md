@@ -3,9 +3,10 @@
 ![](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
 What I can contribute?
--A list of awesome beginner-friendly animations.
--Creative & simple landing pages.
+-A list of awesome beginner-friendly issues.
+-Creative & simple landing contributions.
 -DSA codes in any language.
+-Add your projects to contribute
 
 Create a seprate directory for each contribution.
 ## Contribution Instructions
