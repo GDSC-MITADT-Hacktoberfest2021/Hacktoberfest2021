@@ -24,7 +24,9 @@ h4 {
 a {
   color: inherit;
 }
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: inherit;
 }
 
@@ -178,11 +180,26 @@ a:hover, a:focus, a:active {
   padding: 25px;
   text-align: center;
   background-color: #0076a3;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMjgwODE0IiB5MT0iLTAuMTAyMjA4IiB4Mj0iMC43MTkxODYiIHkyPSIxLjEwMjIwOCI+PHN0b3Agb2Zmc2V0PSItMjUlIiBzdG9wLWNvbG9yPSIjMTE1YjliIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMxMjkwZjgiLz48c3RvcCBvZmZzZXQ9IjEyNSUiIHN0b3AtY29sb3I9IiMxMTViOWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMjgwODE0IiB5MT0iLTAuMTAyMjA4IiB4Mj0iMC43MTkxODYiIHkyPSIxLjEwMjIwOCI+PHN0b3Agb2Zmc2V0PSItMjUlIiBzdG9wLWNvbG9yPSIjMTE1YjliIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMxMjkwZjgiLz48c3RvcCBvZmZzZXQ9IjEyNSUiIHN0b3AtY29sb3I9IiMxMTViOWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=");
   background-size: 100%;
-  background-image: -moz-linear-gradient(290deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
-  background-image: -webkit-linear-gradient(290deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
-  background-image: linear-gradient(160deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
+  background-image: -moz-linear-gradient(
+    290deg,
+    #115b9b -25%,
+    #1290f8 50%,
+    #115b9b 125%
+  );
+  background-image: -webkit-linear-gradient(
+    290deg,
+    #115b9b -25%,
+    #1290f8 50%,
+    #115b9b 125%
+  );
+  background-image: linear-gradient(
+    160deg,
+    #115b9b -25%,
+    #1290f8 50%,
+    #115b9b 125%
+  );
   color: #fff;
 }
 .about-us-col .col-icon-wrapper {
@@ -419,7 +436,7 @@ a:hover, a:focus, a:active {
 /* Pages 
 ================================= */
 .page-heading {
-  background: url('../static/imgs/heading-bg.jpg?1428795369') no-repeat center;
+  background: url("../static/imgs/heading-bg.jpg?1428795369") no-repeat center;
   background-size: cover;
   min-height: 190px;
   color: #fff;
@@ -551,7 +568,7 @@ form .alert {
   width: 280px;
 }
 .title-under:after {
-  content: '';
+  content: "";
   display: block;
   width: 100px;
   background: inherit;
@@ -615,7 +632,8 @@ form .alert {
   border-color: #1f76bd #1f76bd #1f76bd #115c9b;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
   background: #115c9b;
   color: #fff;
 }
@@ -696,7 +714,7 @@ form .alert {
   width: 46px;
   height: 48px;
   position: absolute;
-  background: url('../images/icons/zoom-icon.png?1428101315');
+  background: url("../images/icons/zoom-icon.png?1428101315");
   top: 50%;
   left: 50%;
   margin-top: -23px;
@@ -913,7 +931,11 @@ form .alert {
 }
 
 @-webkit-keyframes bounceInUp {
-  0%, 60%, 75%, 90%, 100% {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -941,7 +963,11 @@ form .alert {
   }
 }
 @keyframes bounceInUp {
-  0%, 60%, 75%, 90%, 100% {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -974,7 +1000,11 @@ form .alert {
 }
 
 @-webkit-keyframes bounceInDown {
-  0%, 60%, 75%, 90%, 100% {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1002,7 +1032,11 @@ form .alert {
   }
 }
 @keyframes bounceInDown {
-  0%, 60%, 75%, 90%, 100% {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
