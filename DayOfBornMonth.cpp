@@ -79,7 +79,7 @@ int main(void)
                 cout << "             Try again!               " << endl;
             }
 
-            else
+            else 
             {
                 cout << " The days of a month are up to 31. " << endl;
                 cout << "            Try again!             " << endl;
