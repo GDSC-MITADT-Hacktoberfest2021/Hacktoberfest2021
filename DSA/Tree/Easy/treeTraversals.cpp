@@ -11,6 +11,24 @@ struct Node {
 	}
 };
 
+//Creating the tree
+Node* insertBST(Node* root, int val)
+{
+    if(root==NULL){
+        Node* n = new Node(val);
+        return n;
+    }
+    
+    if(val < root->data){
+        root->left = insertBST(root->left,val);
+    }
+    else{
+        //if(val > root->data)
+        root->right = insertBST(root->right,val);
+    }
+    return root;
+}
+
 void printPostorder(Node* node)
 {
 	if (node == NULL)
@@ -43,11 +61,21 @@ void printPreorder(Node* node)
 
 int main()
 {
-	struct Node* root = new Node(1);
-	root->left = new Node(2);
-	root->right = new Node(3);
-	root->left->left = new Node(4);
-	root->left->right = new Node(5);
+	Node *root = NULL;
+    int n;
+    cout<<"Enter array size: ";
+    cin>>n;
+    int arr[n];
+    cout<<"\nEnter array elements: ";
+   for(int i=0;i<n;i++){
+       cin>>arr[i];
+   }
+
+   root = insertBST(root,arr[0]);
+   for(int i=1;i<n;i++)
+   {
+       insertBST(root,arr[i]);
+   }
 
 	cout << "\nPreorder traversal of binary tree is \n";
 	printPreorder(root);
