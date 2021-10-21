@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:login_app/login.dart';
-import 'package:login_app/register.dart';
+import 'package:login_app/Screens/login.dart';
+import 'package:login_app/Screens/register.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);

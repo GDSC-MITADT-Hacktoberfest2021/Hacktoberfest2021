@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'curve.dart';
+import '../Widget/curve.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -148,9 +148,7 @@ class _LoginPageState extends State<LoginPage> {
                           MaterialStateProperty.all<Color?>(Colors.pink[800]),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              bottomRight: Radius.circular(20.0)),
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         ),
                       ),
                     ),
