@@ -1,0 +1,259 @@
+@media (max-width:480px)
+{
+    .header_content > h1{
+        opacity: 0.85;
+    }
+    
+    .hid_in_small{
+        display: none;
+    }
+    
+    .hid_in_smallTwo{
+        display: none;
+    }
+    
+    
+    .service_block{
+        grid-column-start: 1 ;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    
+     .inner_Service_block{
+        display: block;
+        text-align: center;
+    }
+    
+    
+    .inner_Service_block img{
+        margin-right: 0;
+    }
+    
+    .sub_inner_Services_block {
+        margin-top: 3rem;
+    }
+    
+    .sub_inner_Services_block h4{
+        margin-bottom: 1rem;
+    }
+    .image_size_handle{
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .hid_btn{
+        display: initial;   
+    }
+    
+    
+    .arrow_btns{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .arrows{
+        background: #FFFFFF;
+        border: 1px solid #C3CEE2;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 0 0.3rem;
+        padding: 1em 4.3em;
+        cursor: pointer;
+        transform:scale(1,1);
+        transition:transform 0.3s 0s ease;
+        
+    }
+    
+    .arrows:hover{
+        transform: scale(1.05,1.03);
+    }
+    
+    
+    .port_img
+    {
+        height: 375px;
+        width: 90%;
+    }
+    
+    .show_in_small{
+        display: inherit;
+        width: 120%;
+    }
+    
+    .more_block
+    {
+        display: inline-block;
+        width: 97%;
+        margin-top: 10rem;
+        right: 0;
+        left: 1.7%;
+    }
+    
+    #footer1{
+        margin-top: 12rem;
+    }
+    
+    .foot_inner1{
+        margin: 5rem 0 3rem;
+        width: 90%;
+        padding: 0 1rem;
+    }
+    
+    .foot_inner1 p{
+        line-height: 1.8rem;
+    }
+    
+    .upper_arrow
+    {
+        right: 42.6%;
+    }
+    
+    .inner_footer{
+        text-align: center;
+        display: inherit;
+    }
+    
+    .inner_footer_subOne_content p:last-of-type{
+        margin-top: 4rem;
+    }
+    
+    .inner_footer_subOne_sites{
+        width: 100%;
+        margin-top: 3rem;
+    }
+    
+    .inner_footer_subOne_sites img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+
+
+@media (max-width:768px)
+{
+    nav{
+        padding: 1rem;
+    }
+    
+    nav #icon{
+        display: block;
+        margin-top: 1rem;
+    }
+    
+    .navbar_list{
+        display: none;
+    }
+    
+    #header
+    {
+        background-image:url('../public/Header/logo/Rectangle\ 4.png'),url('../public/Header/Bitmap.png');
+        background-size: 165% 100%;
+        height:20em;
+    }
+    
+    .header_content{
+        padding: 0 1rem 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+        display: block;
+    }
+    
+    .header_content h1{
+        margin-top: 35rem;
+    }    
+    
+    .para
+    {
+        font-size: 1rem;     
+        width: 100%;
+        margin-top: 6rem;
+    }
+    
+    #talk_button{   
+        display:inline-block;
+    }
+    
+    .main_content
+    {
+        margin:32rem 2rem 0;
+    }
+    
+
+    .our_work div{
+        margin: 0 0 2rem;
+    }
+    
+    .stripe{
+        width:5rem;
+        height:5rem;
+    }
+    
+    .hid_in_small{
+        display: none;
+    }
+    
+    .more_block{ 
+        top: 93% !important;
+    }
+    
+    .inner_footer{
+        padding: 4.5rem 1.5rem 1rem !important;    
+    }
+    
+}
+
+
+@media (min-width:768px) and (max-width:1280px)
+{
+    nav{
+        padding: 1.4rem;
+   }
+   
+   .header_content
+   {
+       display: block;
+   }
+   
+
+   #header
+   {
+    background-image:url('../public/Header/logo/Rectangle\ 5.png'),url('../public/Header/Bitmap.png');
+       background-size: 70% 100%;
+   }
+   
+   #start_button{
+       font-size: 0.8rem;
+       padding: inherit 0;
+   }
+   
+   .navbar_list li {
+       font-size: 0.88rem;
+   }
+   
+   .stripe{
+    width:9rem;
+    height:9rem;
+    }
+
+    .hid_in_small{
+    display: none;
+    }
+    
+    .port_img{
+        width: 30%;
+    }
+    
+    .more_block{
+        width: 27%; 
+        top: 455px;
+        right: 0.5%;
+    }
+    
+    .inner_footer{
+        padding: 4.5rem 4rem 1rem;    
+    }
+    
+}
+
