@@ -1,0 +1,576 @@
+/* -- Import Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+/* -- Universal CSS -- */
+* {
+  outline: none;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+/* -- Declaring CSS Variable -- */
+:root {
+  --theme-bg-color: rgba(16 18 27 / 55%);
+  --border-color: rgba(255 255 255 / 15%);
+  --theme-color: #e7e7e7;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-font: "Inter", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
+  --font-weight: 500;
+}
+
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--body-font);
+    background-image: url("https://github.com/asitsonawane/BMI-calculator-with-glassmorphism/blob/main/assets/img/backgroundImg.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    width: 100%;
+    height: 100vh;
+}
+
+/* -- Scrollbar Style --  */
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    border-radius: 50px;
+    transition: 1s;
+}
+/*-- Header CSS --*/
+.header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding: 35px;
+    white-space: nowrap;
+  }
+
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* -- BMI Icon -- */
+.bmi-icon{
+    width: 50px;
+    height: 50px;
+}
+
+/* -- BMI Icon Pulse Animation -- */
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    25% {
+       -webkit-transform: scale(0.9);
+       transform: scale(0.9);
+    }
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+         }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      }
+    100% {
+        -webkit-transform: scale(1);
+       transform: scale(1);
+    }
+}
+
+/* -- Main Panel Heading -- */
+#title {
+    color: white;
+    font-weight: 100;
+}
+
+/* -- Loadtime -- */
+.loadtime{
+    color: white;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 40px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+#loadtime{
+    font-weight: bold;
+    background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* -- Main Panel --*/
+.app {
+    background-color: var(--theme-bg-color);
+    max-width: 1250px;
+    max-height: 860px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-size: 15px;
+    font-weight: var(--font-weight);
+  }
+
+/* -- Content Section -- */
+.content-wrapper {
+    color: var(--theme-color);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--theme-bg-color);
+    height: 100%;
+    padding: 20px 40px;
+}
+.content-wrapper.overlay {
+    pointer-events: none;
+    transition: 0.3s;
+    background-color: var(--overlay-bg);
+}
+
+.colCov{
+    float: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    background-color: var(--content-bg);
+    border-radius: 14px;
+    border: 1px solid var(--theme-bg-color);
+    padding: 20px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+.colCov:hover{
+    transform: scale(1.02);
+    background-color: var(--theme-bg-color);
+}
+
+/*-- What is BMI Panel --*/
+.content-wrapper-header {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    border-radius: 14px;
+    padding: 20px 40px;
+    animation: animateBg 15s infinite linear;
+}
+
+/* -- Animation for Header Wrapper Background -- */
+@keyframes animateBg {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+}
+
+/* -- Container CSS -- */
+.grid-container{
+    display:flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+}
+
+/* -- Card Styling -- */
+.cardSubtxt {
+    font-size: 14px;
+    font-weight: var(--font-weight);
+    line-height: 1.6em;
+    margin-top: 1px;
+    padding-bottom: 0px;
+}
+
+.card{
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.3s ease;
+    margin: auto 0 auto 0;
+}
+
+.cardBg{
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    background-color: var(--content-bg);
+    border-radius: 14px;
+    border: 1px solid var(--theme-bg-color);
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.cardBg:hover{
+    transform: scale(1.02);
+    background-color: var(--theme-bg-color);
+}
+
+.valOutput{
+    margin: 25px auto 25px auto;
+    font-size: 50px;
+  }
+
+/* -- Weight Card-- */
+.wHead{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+#wSubtxt{
+    padding-bottom: 20px;
+}
+.align{
+    text-align:center;
+}
+
+/* -- Weight Slider -- */
+.weightSlider[type=range] {
+    width: 50%;
+    border-radius: 50px;
+    margin: 7.5px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+
+.weightSlider[type=range]:focus {
+    outline: none;
+    border-radius: 50px;
+}
+.weightSlider[type=range]::-webkit-slider-runnable-track {
+    background: #dcdcdc;
+    border-radius: 50px;
+    border: 0;
+    width: 50%;
+    height: 5px;
+}
+.weightSlider[type=range]::-webkit-slider-thumb {
+    margin-top: -7.5px;
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    -webkit-appearance: none;
+}
+.weightSlider[type=range]:focus::-webkit-slider-runnable-track {
+    background: #e9e9e9;
+    border-radius: 50px;
+}
+.weightSlider[type=range]::-moz-range-track {
+    background: #dcdcdc;
+    border-radius: 50px;
+    border: 0;
+    width: 50%;
+    height: 5px;
+}
+.weightSlider[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+}
+.weightSlider[type=range]::-ms-track {
+    background: transparent;
+    border-radius: 50px;
+    border-color: transparent;
+    border-width: 7.5px 0;
+    color: transparent;
+    width: 50%;
+    height: 5px;
+}
+.weightSlider[type=range]::-ms-fill-lower {
+    background: #cfcfcf;
+    border-radius: 50px;
+    border: 0;
+}
+.weightSlider[type=range]::-ms-fill-upper {
+    background: #dcdcdc;
+    border-radius: 50px;
+    border: 0;
+}
+
+/*Needed to keep the Edge thumb centred*/
+.weightSlider[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    margin-top: 0px;
+}
+.weightSlider[type=range]:focus::-ms-fill-lower {
+    background: #dcdcdc;
+    border-radius: 50px;
+}
+.weightSlider[type=range]:focus::-ms-fill-upper {
+    background: #e9e9e9;
+    border-radius: 50px;
+}
+
+/* -- Height Card -- */
+.height-div{
+    margin-top: 10px;
+    padding-left: 25%;
+    padding-right: 10%;
+}
+
+.heightLeft{
+    width: 75%;
+    float: left;
+    margin: auto 0px auto 0px;
+}
+
+.heightRight{
+    width: 25%;
+    float: right;
+}
+
+.heightSlider{
+    transform-origin: 75px 75px;
+    transform: rotate(-90deg);
+    margin: auto 0 auto 0;
+    width: 100%;
+}
+
+.hHead{
+    display: block;
+    margin-right: auto;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-align: left !important;
+}
+
+.heightSlider[type=range] {
+    width: auto;
+    margin: 7.5px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: 50px;
+}
+.heightSlider[type=range]:focus {
+    outline: none;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-webkit-slider-runnable-track {
+    background: #dcdcdc;
+    border-radius: 50px;
+    border: 0;
+    width: auto;
+    height: 5px;
+}
+.heightSlider[type=range]::-webkit-slider-thumb {
+    margin-top: -7.5px;
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    -webkit-appearance: none;
+
+}
+.heightSlider[type=range]:focus::-webkit-slider-runnable-track {
+    background: #e9e9e9;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-moz-range-track {
+    background: #dcdcdc;
+    border: 0;
+    width: auto;
+    height: 5px;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 7.5px 0;
+    color: transparent;
+    width: auto;
+    height: 5px;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-ms-fill-lower {
+    background: #cfcfcf;
+    border: 0;
+    border-radius: 50px;
+}
+.heightSlider[type=range]::-ms-fill-upper {
+    background: #dcdcdc;
+    border: 0;
+    border-radius: 50px;
+}
+/*Needed to keep the Edge thumb centred*/
+.heightSlider[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3a6df0;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    margin-top: 0px;
+}
+.heightSlider[type=range]:focus::-ms-fill-lower {
+    background: #dcdcdc;
+    border-radius: 50px;
+}
+.heightSlider[type=range]:focus::-ms-fill-upper {
+    background: #e9e9e9;
+    border-radius: 50px;
+}
+
+/* -- BMI Card -- */
+#bmioutput{
+    font-size: 100px;
+    background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    animation-name: animateTxt;
+}
+
+/* -- Right BMI Value Column-- */
+.rightCol{
+    margin-left: 10px;
+}
+
+/*-- Adds Responsiveness for Desktop--*/
+@media screen and (min-width: 800px) {
+
+}
+
+/*-- Adds Responsiveness Tablets and Mobiles --*/
+@media screen and (max-width: 800px)
+{
+    body {
+    padding: 0.8em;
+    height: 95vh;
+    }
+    .app{
+        height: 95vh;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 100;
+    }
+    .para{
+        line-height: 15px;
+    }
+    .heightRight{
+        margin-top: -25px;
+    }
+    .bmiHead{
+        font-size: 35px;
+        margin: 0 0 20px 0;
+    }
+    .column{
+        width: 100%;
+    }
+    .rightCol{
+        margin: 10px 0 0 0;
+    }
+    .loadtime{
+        display: none;
+    }
+    .app{
+        height: 85vh;
+    }
+
+}
+
+.cursor-point {
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999;
+  background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+}
+
+.cursor-point {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid white;
+}
+
+.cursor-click:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+  animation: cursorAnimation 400ms;
+}
+
+@keyframes cursorAnimation {
+  to {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}

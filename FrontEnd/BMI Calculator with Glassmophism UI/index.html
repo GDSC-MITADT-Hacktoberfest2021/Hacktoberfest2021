@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BMI Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+        <script src="./script.js" async="" defer=""></script>
+    </head>
+    <body>
+        <div class='cursor'></div>
+        <div class="app">
+
+            <!-- Header -->
+
+            <div class="header">
+                <div class="header-menu">
+
+                    <!-- Header Icon -->
+                    <span>
+                      <lord-icon class="bmi-icon" src="https://cdn.lordicon.com//rjzlnunf.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff">
+                      </lord-icon>
+                    </span>
+
+                    <!-- Header Title -->
+                    <span>
+                        <h1 id="title">BMI Calculator</h1>
+                    </span>
+                </div>
+                <div class="loadtime">
+                    Page load time is&nbsp; <span id="loadtime"></span> &nbsp;seconds
+                </div>
+            </div>
+
+            <!-- Main Panel Content -->
+
+            <div class="content-wrapper">
+                <div class="content-wrapper-header">
+                    <h2>What is BMI?</h2>
+                    <div>
+                        <p class="para">Body Mass Index (BMI) is a measure of body fat derived on the basis of an adult man or woman’s height and weight. BMI is a major determinant of one’s obesity or leanness. Moreover, BMI is a reliable and quick way of gauging the health of a person. It is a cost-effective and simple method of screening the categories of weight that may lead to medical problems in the near-future.</p>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="align card cardBg">
+                          <h3 class="wHead">Weight</h3>
+                        <div class="cardSubtxt" id="wSubtxt"><p class="para">Select your weight in KG</p></div>
+                        <div>
+                            <input type="range" min="30" max="150" value="" class="weightSlider" id="weightInput"  onchange=bmi()>
+                            <p><span class="valOutput" id="weightVal" style="display: inline;">
+                            </span>kg</p>
+                        </div>
+                    </div>
+                      <div class="height-div card cardBg">
+                        <div class="heightLeft">
+                            <h3 class="hHead">Height</h3>
+                            <div class="heightLeft">
+                                <div class="cardSubtxt"><p class="para">Select your height in CM</p></div>
+                                    <p class="hpara"><span class="valOutput" id="heightVal" style="display: inline;">
+                                    </span>cm</p>
+                                </div>
+                            </div>
+                            <div class="heightRight">
+                                <input type="range" min="140" max="210" value="" class="heightSlider" id="heightInput"  onchange=bmi()>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="rightCol column cardBg align">
+                      <div class="bmi card">
+                        <h3 class="wHead">BMI score</h3>
+                        <div id="bmioutput"></div>
+                        <div id="catoutput"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </body>
+</html>
