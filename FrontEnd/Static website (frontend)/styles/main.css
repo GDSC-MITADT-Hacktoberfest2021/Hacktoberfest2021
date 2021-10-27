@@ -1,0 +1,102 @@
+.main_content{
+    margin: 5rem 5rem 0;
+    flex-wrap: wrap;
+}
+
+.our_work{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.our_work div{
+    width: 45%;
+}
+
+.our_work div h3{
+    margin-bottom: 1rem;
+}
+
+
+
+#stripe_rect
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3.2rem;
+}
+
+#service_head{
+    text-align: center;
+}
+
+#service_box{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 1rem;
+}
+
+.service_block{
+    padding: 1rem;
+    border: 1px solid #C3CEE2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transform: scaleZ(1,1);
+    transition: transform 0.3s 0s ease,box-shadow 0.3s 0s ease;
+}
+
+.inner_Service_block
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.inner_Service_block img{
+    margin-right: 2rem;
+}
+
+.service_block:hover{
+    transform: scale(1.03,1.04);
+    transform: box-shadow; 
+    box-shadow: 0px 0px 15px rgba(49, 133, 227, 0.15);
+    cursor: pointer;
+}
+
+
+.sub_inner_Services_block{
+        display: flex;
+        flex-direction: column;
+}
+
+.sub_inner_Services_block p{
+    margin-top: auto;
+}
+
+.hid_btn{
+    display: none;
+}
+
+#portfolio h2{
+    text-align: center;
+}
+
+#portfolio_box
+{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.show_in_small
+{
+    display: none;
+}
+
+.more_block {
+    position: absolute;
+    right:1%;
+    top: 620px;
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --btn-color:rgb(35, 196, 179);
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body
+{
+    box-sizing: border-box;
+}
+
+#header
+{
+    background-image:url('../public/Header/logo/Rectangle\ 5.png'),url('../public/Header/Bitmap.png');
+    background-repeat: no-repeat no-repeat;
+    background-size: 48% 100%;
+    background-position: 100% 0;
+    width: 100%;
+    min-height: 46.8rem;
+}
+
+nav{
+    padding: 2rem 4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav #icon{
+    color: grey;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+
+#logo
+{
+    margin-top: 1rem;
+    display: inline-flex;
+}
+
+#logo img
+{
+    width: 16px;
+    height: 38px;
+}
+#logoText{
+    display: block;
+    margin-left: 1.2rem;
+}
+
+#logoText1{
+    font-size:1.2rem;
+    display: block  ;
+    font-weight: 700;
+      
+}
+
+#logoText2{
+    font-size: 0.7rem;
+    white-space: nowrap;
+
+}
+
+.navbar_list_div
+{
+    display: flex;
+}
+
+.navbar_list li{
+    display: inline-flex;
+    margin: 1.5rem;
+}
+
+#start_button
+{
+    padding: 0.5rem 1rem;
+}
+
+#talk_button{
+    margin-top: 5rem;
+}
+
+.button{
+    color:white;
+    background-color:var(--btn-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: box-shadow 0.4s 0s ease;
+}
+
+.header_content {
+    padding: 5rem 8rem 1rem;
+    letter-spacing: 1px;
+}
+
+.dummy_text
+{
+    background-color: var(--btn-color);
+    padding:0.2rem 0;
+    color: white;
+}
+
+.para{
+    width:40%;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
+
+.sec_para {
+    margin-top: 2rem;
+}
