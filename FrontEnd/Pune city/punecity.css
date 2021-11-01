@@ -1,0 +1,61 @@
+h1 {
+    font-style: Fantasy;
+}
+
+.pune-info {
+    background-color: skyblue;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.pune-info h1 {
+    text-align: center;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-gap: 50px;
+}
+
+.div-food div {
+    margin: auto;
+    margin-top: 40px;
+    width: 400px;
+    border: 5px solid brown;
+    padding: 20px;
+    background-color: #E3F5F5;
+    text-align: center;
+}
+
+.div-food {
+    text-align: center;
+    background-color: #E7C4C4;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.div-food img {
+    height: 250px;
+    width: 300px;
+}
+
+.places {
+    text-align: center;
+    background-color: #BBBBFF;
+    padding-bottom: 20px;
+}
+
+.places img {
+    width: 650px;
+}
+
+.places div {
+    margin: auto;
+    margin-top: 40px;
+    width: 700px;
+    border: 5px solid purple;
+    padding: 20px;
+    background-color: #FFF1D7;
+    text-align: center;
+}
